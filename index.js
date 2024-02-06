@@ -5,7 +5,7 @@ const port = 3000;
 
 import {runConfig} from "./dbConfig.js";
 
-app.get('/', async (req, res) => {
+app.get('/getAllStudent', async (req, res) => {
     try {
         const query = "SELECT * FROM your_table";
         let result = await runConfig(query);
