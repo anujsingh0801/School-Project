@@ -9,7 +9,7 @@ export const runConfig = (query) => {
             host: 'localhost',
             user: 'root',
             password: 'Anuj@8296',
-            database: 'springjdbc'
+            database: 'schoolDB'
         });
 
         // Connect to the database
