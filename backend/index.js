@@ -7,7 +7,6 @@ import apiRoutes from "./routes/apiRoute.js";
 
 const app = express();
 const port = 3003;
-const serverIP = "192.168.0.109";
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
@@ -39,6 +38,6 @@ app.use(
 app.use("/auth", authRoutes);
 app.use("/api", apiRoutes);
 
-app.listen(port, serverIP, () => {
+app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
