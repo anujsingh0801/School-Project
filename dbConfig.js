@@ -9,7 +9,7 @@ export const runConfig = (query) => {
             host: 'localhost',
             user: 'root',
             password: 'Anuj@8296',
-            database: 'schoolDB'
+            database: 'schooldb'
         });
 
         // Connect to the database
