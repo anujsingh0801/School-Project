@@ -1,13 +1,13 @@
 import express from "express";
 import session from "express-session";
-import { runConfig } from "./dbConfig.js";
 import MySQLStoreFactory from "express-mysql-session";
-import bcrypt from "bcryptjs";
 import cors from "cors";
-import authRoutes from './routes/authRoute.js'
+import authRoutes from "./routes/authRoute.js";
+import apiRoutes from "./routes/apiRoute.js";
 
 const app = express();
 const port = 3003;
+const serverIP = "192.168.0.109";
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
@@ -36,9 +36,9 @@ app.use(
 );
 
 // Routes
-app.use('/auth', authRoutes)
-app.use('/api', apiRoutes)
+app.use("/auth", authRoutes);
+app.use("/api", apiRoutes);
 
-app.listen(port, () => {
+app.listen(port, serverIP, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });

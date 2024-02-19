@@ -1,8 +1,8 @@
-import { Router } from 'express';
-import { getAllStudents } from '../controllers/studentController'
+import { Router } from "express";
+import { getAllStudents } from "../controllers/studentController.js";
 
-const router = Router();
+const apiRoutes = Router();
 
-router.get('/allstudents', getAllStudents)
+apiRoutes.get("/allstudents", getAllStudents);
 
-export default router
+export default apiRoutes;
